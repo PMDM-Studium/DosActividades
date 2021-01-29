@@ -2,6 +2,7 @@ package es.studium.dosactividades;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,12 +14,14 @@ Button btnBoton;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnBoton= findViewById(R.id.miBoton);
+
+        btnBoton= findViewById(R.id.btnPulsar);
         btnBoton.setOnClickListener(this);
     }
     @Override
-    public void onclick(View v)
-    {
+    public void onClick(View v) {
         setContentView(R.layout.activity_secondary);
+       // Intent secondaryActivity=new Intent(this,SecondaryActivity.class);
+       // startActivities(secondaryActivity);
     }
 }
